@@ -1,0 +1,15 @@
+{
+  "name": "learn",
+  "version": "1.0.0",
+  "description": "For Learning Nodejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "DngBack",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.18.2"
+  }
+}
