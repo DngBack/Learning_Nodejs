@@ -42,6 +42,17 @@ const pageCreateUsers = (req, res) => {
     res.render('create.ejs')
 }
 
+const getUpdatePage = async (req, res) => {
+    const useId = req.params.id;
+    let [results, fields] = await connection.query(`select * from Users where id = ?`, [useId])
+
+    console.log(">> Check Id: ", results)
+
+    let user = results && results.length > 0 ? results[0] : {};
+
+    res.render('edit.ejs', { userEdit: user })
+}
+
 module.exports = {
-    getHomepage, getTestroute, postCreateUsers, pageCreateUsers
+    getHomepage, getTestroute, postCreateUsers, pageCreateUsers, getUpdatePage
 }

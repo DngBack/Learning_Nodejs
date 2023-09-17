@@ -3,33 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create New Users</title>
+    <title>Edit Info Users</title>
 </head>
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        padding: 20px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    tr:hover {
+        background-color: coral;
+    }
+</style>
+
 
 <body>
     <div class="topnav">
         <a href="/">Home</a>
-        <a href="./create" class="active">Create Users</a>
-        <a href="/update"> Update A Users</a>
+        <a href="/create">Create Users</a>
+        <a href="/update" class="active"> Update A Users</a>
         <link rel="stylesheet" href="/css/styles.css">
     </div>
     <div class="form-add-new">
         <form action="/create-users" method="post">
             <fieldset>
-                <legend>Form Adding users: </legend>
+                <legend>Update Info of Users</legend>
                 <div class="input-group">
                     <label>Email: </label>
-                    <input type="text" name="email" />
+                    <input type="text" name="email" value="<%= userEdit.email %>" />
                 </div>
 
                 <div class="input-group">
                     <label>Name: </label>
-                    <input type="text" name="name" />
+                    <input type="text" name="name" value="<%= userEdit.name %>" />
                 </div>
 
                 <div class="input-group">
                     <label>City: </label>
-                    <input type="text" name="city" />
+                    <input type="text" name="city" value="<%= userEdit.city %>" />
                 </div>
                 <div class="button-save">
                     <button>Save</button>
@@ -38,7 +58,6 @@
             </fieldset>
         </form>
     </div>
-
 </body>
 
 </html>

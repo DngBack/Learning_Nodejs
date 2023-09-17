@@ -30,6 +30,7 @@
     <div class="topnav">
         <a class="active" href="/">Home</a>
         <a href="/create">Create Users</a>
+        <a href="/update"> Update A Users</a>
         <link rel="stylesheet" href="/css/styles.css">
     </div>
     <div class="table_contain">
@@ -57,8 +58,8 @@
                         <%= listUsers[i].city %>
                     </td>
                     <td>
-                        <button>Edit</button>
-                        <button>Delete</button>
+                        <a href="/update/<%=listUsers[i].id%>">Edit</a>
+                        <a>Delete</a>
                     </td>
                 </tr>
                 <% } %>
